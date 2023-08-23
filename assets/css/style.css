@@ -355,7 +355,8 @@ h6 {
   height: 100vh;
   background: url("../img/viktor-axelsen-bg-2.png");
   background-size: cover;
-  background-position-x: center;
+  /* background-position-x: center; */
+  background-position-x: left;
 }
 
 #hero .hero-container {
