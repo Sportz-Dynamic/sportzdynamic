@@ -350,13 +350,28 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+/* #hero {
   width: 100%;
   height: 100vh;
   background: url("../img/viktor-axelsen-bg-2-min.png");
   background-size: cover;
   background-position-x: center;
-  /* background-position-x: left; */
+} */
+#hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  background: none; /* remove direct bg */
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/viktor-axelsen-bg-2-min.png") center/cover no-repeat;
+  opacity: 0.9; /* adjust */
+  z-index: -1; /* behind content */
 }
 
 #hero .hero-container {
@@ -373,6 +388,15 @@ h6 {
   padding: 0 15px;
 }
 
+#hero .main-title {
+  color: #ff9900;
+}
+
+#hero .title {
+  background-color: rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
 #hero .hero-logo {
   margin-bottom: 30px;
 }
@@ -387,7 +411,6 @@ h6 {
 
 #hero h2 {
   color: #aeaeae;
-  margin-bottom: 30px;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -404,7 +427,7 @@ h6 {
   border-radius: 3px;
   margin: 10px;
   color: #fff;
-  background: #7cc576;
+  background: #00A84D;
 }
 
 #hero .btn-get-started:hover {
